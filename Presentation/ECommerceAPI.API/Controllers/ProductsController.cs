@@ -29,7 +29,7 @@ namespace ECommerceAPI.API.Controllers
         [HttpGet]
         public async Task Get()
         {
-             Order order=await _orderReadRepository.GetByIdAsync("caf231db-11b5-4c2f-b031-378f64077c91");
+            Order order = await _orderReadRepository.GetByIdAsync("caf231db-11b5-4c2f-b031-378f64077c91");
             order.Address = "Ankara";
             await _orderWriteRepository.SaveAsync();
         }
